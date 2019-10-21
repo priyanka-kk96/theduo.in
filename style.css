@@ -1,0 +1,140 @@
+body{
+	font-family: 'Montserrat', sans-serif;
+	color:#514e5d;
+}
+/*********************NAV***************************/
+.navbar-brand {
+    height: 100px
+}
+
+.navbar-brand>img {
+    width: auto;
+    height: -webkit-fill-available;
+}
+
+.flex-nav{
+	display: flex;
+    align-items: center;
+}
+.navbar-header {
+    width: 10%;
+}
+div#myNavbar {
+    width: 90%;
+}
+.navbar-nav>li>a {
+		color:#514e5d;
+		transition:all ease 0.4s;
+		    border-radius: 40px;
+    padding: 8px 25px;
+	font-weight:500;
+
+
+}
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: none;
+    background-color: #ee4367;
+    color: #fff;
+
+			transition:all ease 0.4s;
+
+}
+/*************************WORK**********************/
+.light{
+	font-weight:200;
+}
+
+.bold{
+	font-weight:800;
+}
+div#work {
+    padding: 100px 0;
+    /* margin-bottom: 0; */
+}
+.jumbotron h2.text-left {
+    margin: 0;
+}
+.jumbotron p.text-right {
+    margin: 0!important;
+}
+
+#work .text-right {
+    font-weight: 500;
+    color: #1c1259;
+}
+.see-right i {
+    color: #1c1259;
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 16px;
+	 -webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.4);
+    box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.4);
+}
+
+.project img {
+    width: 100%;
+}
+
+#work .row {
+    margin: 20px 0 0!important;
+}
+#work .col-xs-12 {
+    padding: 0;
+}
+
+.project img {
+    border-radius: 8px;
+    -webkit-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.4);
+    -moz-box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.4);
+    box-shadow: 4px 5px 12px -3px rgba(0,0,0,0.4);
+}
+a.single-project:hover i {
+    opacity: 1;
+    top: 170px;
+    transition: all ease-in 0.3s;
+}
+.single-project i {
+    opacity: 0;
+    position: absolute;
+    left: 15px;
+    font-size: 7px;
+    top: 185px;
+    background: #ee4367;
+    padding: 10px;
+    border-radius: 100%;
+    color: #fff;
+}
+
+a.single-project{
+	position:relative;
+}
+
+.single-project .project::after {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.05);
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all ease 0.3s;
+    border-radius: 8px;
+}
+
+
+.single-project:hover .project::after {
+    opacity: 1;
+}
+.project {
+    position: relative;
+	border-radius:8px;
+}
+
+.single-project > *
+{
+	z-index:100;
+}

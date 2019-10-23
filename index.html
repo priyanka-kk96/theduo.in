@@ -15,145 +15,179 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="script.js"></script>
   <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-    }
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
+     .intro {
+    background: transparent url(http://theduo.epizy.com/assets/images/bg1.png) repeat;
+    position: relative;
+}
+	.animation-mask{	
+		overflow:hidden;
+		width:163px;
+		height:157px;
+		margin: auto;
+		position:relative;
+	}
+.logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3000%;
+    -webkit-animation: logo-play 1.15s steps(29) 1;
+    animation: logo-play 1.15s steps(29) 1;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: -1;
+}
+.smileyButton > div svg{width:10px;height:5px;position:absolute;left:52%;top:75px;margin:0 0 0 -5px;-webkit-transform:translate(0, -0.5px);transform:translate(0, -0.5px);}
+.smileyButton > div svg path{stroke-width:3;stroke:#000;fill:none;stroke-linecap:round;z-index:999;}
+
+
+@keyframes logo-play{100%{left:-2900%;}}
+@-webkit-keyframes logo-play{100%{left:-2900%;}}
+	
+.animation-mask2{
+overflow:hidden;
+		width:120px;
+		height:110px;
+		position:relative;
+		margin: auto;
+}	
+	
+	.girl {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3000%;
+    z-index: -1;
+}
+	
+	section.intro {
+    width: 100vw;
+    height: 100vh;
+}
+	h1.header.large-copy.bold {
+    margin: 0px 0 20px;
+}
+.content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    text-align: center;
+	padding: 40px;
+}
+p.body {
+    font-size: 18px;
+    margin: 20px 20px 30px;
+}
+
+@media only screen and (max-width: 768px) {
+
+.content-wrapper{
+width:-webkit-fill-available;
+padding: 40px;
+}
+	
   </style>
 </head>	
 <body>
 
-<nav class="navbar">
-  <div class="container-fluid">
-  <div class="container flex-nav">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <!--ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Gallery</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul-->
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-      </ul>
-    </div>
-	</div>
-  </div>
-</nav>
 
-<div class="jumbotron" id="work">
-  <div class="container">
-    <div class="row">
-		<div class="col-md-6 col-sm-12">
-		<h2 class="text-left"><span class="light">Our</span>&nbsp;<span class="bold">Videos</span></h2>
-		</div>
-		<div class="col-md-6 hidden-sm">
-		<p class="text-right">See more <a href="works.html" class="see-right"><i class="fas fa-angle-right"></i></a></p>
-		</div>
-	</div>
-	<div class="row">
-		<div class="col-xs-12">
-			<div class="col-lg-4 col-md-6 col-sm-12 projs">
-				<a href="video.html" class="single-project">
-					<div class="project">
-						<img src="images/proj-1.jpg" alt="LT VCA">
-						<i class="fas fa-play"></i>
+<section class="intro fullscreen-js">
+			<div class="content-wrapper">
+				<div class="graphic-content">
+											<div class="animation-mask">
+							<img class="logo" src="images/intro_logo_animation_compressed.png" alt="logo">
+						</div>
+									</div>
+				<h1 class="header large-copy bold">We invite you to join us on a culinary journey</h1>
+				<p class="body highlight-copy"><span class="extra-text">Around the World in 12 Dishes is a collection of tasty recipes and stories of small food-producers. </span>Let's celebrate diversity and build a more intimate relationship with our food and its sources.</p>
+				<a class="" href="home.html" style="">
+				
+				<div class="animation-mask2 smileyButton" style="width: 120px; height: 110px;">
+                      <div>
+						<svg viewBox="0 0 34 10" version="1.1">
+							<path d=""></path>
+						</svg>
 					</div>
-				</a>
-			</div>
-			
-			<div class="col-lg-4 col-md-6 col-sm-12 projs">
-				<a href="video.html" class="single-project">
-					<div class="project">
-						<img src="images/proj-1.jpg" alt="LT VCA">
-						<i class="fas fa-play"></i>
+					<img class="girl" src="images/girl.png" style="animation: logo-play 1.15s steps(29) infinite;">
+                </div>
+				 <!--div class="eyes">
+					<div class="eye">
+					  <div class="ball"></div>
 					</div>
-				</a>
-			</div>
-		
-		<div class="col-lg-4 col-md-6 col-sm-12 projs">
-				<a href="video.html" class="single-project">
-					<div class="project">
-						<img src="images/proj-1.jpg" alt="LT VCA">
-						<i class="fas fa-play"></i>
+					<div class="eye">
+					  <div class="ball"></div>
 					</div>
+				</div>	
+
+					<!-- <div class="eye"> -->
+					  <!-- <div class="ball"></div> -->
+					<!-- </div> -->
+				  <!-- </div> -->
+				
+				
+				
 				</a>
+				
+				
 			</div>
-			
-	</div>
-	</div>
-	<br>
-	<div class="row">
-		<div class="col-xs-12">
-	
-		<div class="col-lg-4 col-md-6 col-sm-12 projs">
-				<a href="video.html" class="single-project">
-					<div class="project">
-						<img src="images/proj-1.jpg" alt="LT VCA">
-						<i class="fas fa-play"></i>
-					</div>
-				</a>
-			</div>
-		
-		<div class="col-lg-4 col-md-6 col-sm-12 projs">
-				<a href="video.html" class="single-project">
-					<div class="project">
-						<img src="images/proj-1.jpg" alt="LT VCA">
-						<i class="fas fa-play"></i>
-					</div>
-				</a>
-			</div>
-		
-		<div class="col-lg-4 col-md-6 col-sm-12 projs">
-				<a href="video.html" class="single-project">
-					<div class="project">
-						<img src="images/proj-1.jpg" alt="LT VCA">
-						<i class="fas fa-play"></i>
-					</div>
-				</a>
-			</div>
+		</section>
+		<script>
 		
 		
-		</div>
-	</div>
-  </div>
-</div>
 
+  
+  
+  var distance, bounding = 150, buttons = document.querySelectorAll('.smileyButton');
 
-<div class="container-fluid" id="contact">
+[].forEach.call(buttons, function(button) {
+    var path = button.querySelectorAll('div svg path')[0];
+    setPathData(path, 1);
+    document.onmousemove = function(e) {
+        distance = calculateDistance(button, e.pageX, e.pageY);
+        if(button == e.target || button == e.target.parentNode) {
+            setPathData(path, bounding);
+        } else if(distance < bounding) {
+            setPathData(path, (bounding - distance));
+        } else {
+            setPathData(path, 1);
+        }
+    }
+    
+});
 
-  <div class="work2 anim-mask2">
-		<img src="images/about.png" border="0" alt="">					
-	</a>
-</div>
-	<h2 class="text-center"><a href="mailto:hello@theduo.in">hello@theduo.in</a></h2>
-	<div class="social">
-	<span><a href=""><i class="fab fa-facebook-f"></i></a></span>
-	<span><a href=""><i class="fab fa-instagram"></i></a></span>
-	<span><a href=""><i class="fab fa-dribbble"></i></a></span>
-	
-	</div>
-<br><br>
+function setPathData(path, value) {
+    var firstStep = 6 / bounding * value;
+    var secondStep = 2 / bounding * value;
+    path.setAttribute('d', ('M1,' + (7 - firstStep) + ' C6.33333333,' + (2 + secondStep) + ' 11.6666667,' + (1 + firstStep) + ' 17,' + (1 + firstStep) + ' C22.3333333,' + (1 + firstStep) + ' 27.6666667,' + (2 + secondStep) + ' 33,' + (7 - firstStep)));
+}
 
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
-</footer>
+function calculateDistance(elem, mX, mY) {
+    var from = {
+            x: mX,
+            y: mY
+        },
+        off = elem.getBoundingClientRect(),
+        nx1 = off.left,
+        ny1 = off.top,
+        nx2 = nx1 + elem.offsetWidth,
+        ny2 = ny1 + elem.offsetHeight,
+        maxX1 = Math.max(mX, nx1),
+        minX2 = Math.min(mX, nx2),
+        maxY1 = Math.max(mY, ny1),
+        minY2 = Math.min(mY, ny2),
+        intersectX = minX2 >= maxX1,
+        intersectY = minY2 >= maxY1,
+        to = {
+            x: intersectX ? mX : nx2 < mX ? nx2 : nx1,
+            y: intersectY ? mY : ny2 < mY ? ny2 : ny1
+        },
+        distX = to.x - from.x,
+        distY = to.y - from.y;
+    return Math.sqrt(distX * distX + distY * distY);
+}
 
-</body>
+		
+		</script>
+		</body>
 </html>
